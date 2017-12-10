@@ -4,7 +4,11 @@
 # @author  : zhoubin
 
 import os
+import logging
+import logging.config
 
+logging.config.fileConfig("logger.conf")
+logger = logging.getLogger("example01")
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 

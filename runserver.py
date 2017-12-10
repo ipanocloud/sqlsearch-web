@@ -1,12 +1,9 @@
-from flask import Flask
+import os
+from app import create_app
+from config import logger
 
-app = Flask(__name__)
-
-
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
-
+app = create_app(os.getenv('FLASK_ENV') or 'default')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    logger.info("server start...")
+    app.run()
