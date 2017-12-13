@@ -11,7 +11,7 @@ logsdir = basedir + '\logs'
 if not os.path.exists(logsdir):
     os.mkdir(logsdir)
 logging.config.fileConfig("logger.conf")
-logger = logging.getLogger("example01")
+logger = logging.getLogger("bizTimeLogger")
 
 
 class Config:
