@@ -6,9 +6,12 @@
 import os
 import logging.config
 
+basedir = os.path.abspath(os.path.dirname(__file__))
+logsdir = basedir + '\logs'
+if not os.path.exists(logsdir):
+    os.mkdir(logsdir)
 logging.config.fileConfig("logger.conf")
 logger = logging.getLogger("example01")
-basedir = os.path.abspath(os.path.dirname(__file__))
 
 
 class Config:
