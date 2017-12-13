@@ -4,7 +4,6 @@
 # @author  : zhoubin
 
 import os
-import logging
 import logging.config
 
 logging.config.fileConfig("logger.conf")
@@ -29,6 +28,7 @@ class TestingConfig(Config):
 
 class DevelopmentConfig(Config):
     DEBUG = True
+    HJ_FUND_ORDER = 'mysql + mysqlconnector://user_fund:kGwU7c3h@192.168.36.101:3306/hj_fund_order'
 
 
 class ProductionConfig(Config):
