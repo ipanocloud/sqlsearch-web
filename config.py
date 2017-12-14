@@ -4,14 +4,10 @@
 # @author  : zhoubin
 
 import os
-import logging.config
+import logger_config
 
 basedir = os.path.abspath(os.path.dirname(__file__))
-logsdir = basedir + '\logs'
-if not os.path.exists(logsdir):
-    os.mkdir(logsdir)
-logging.config.fileConfig("logger.conf")
-logger = logging.getLogger("bizTimeLogger")
+logger = logger_config.get_logger();
 
 
 class Config:
@@ -31,7 +27,18 @@ class TestingConfig(Config):
 
 class DevelopmentConfig(Config):
     DEBUG = True
-    HJ_FUND_ORDER = 'mysql + mysqlconnector://user_fund:kGwU7c3h@192.168.36.101:3306/hj_fund_order'
+    DBCONFIG = {
+        'db0': {
+            'host': 'localhost',
+            'port': 3306,
+            'user': 'root',
+            'password': 'pwd@123',
+            'database': 'jt_cloudstitch'
+        },
+        'db1': {
+            'secret': 'AwEsOmE'
+        }
+    }
 
 
 class ProductionConfig(Config):

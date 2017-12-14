@@ -7,6 +7,7 @@ from flask import Flask
 from flask_bootstrap import Bootstrap
 
 from config import config
+from config import logger
 
 bootstrap = Bootstrap()
 
@@ -17,6 +18,7 @@ def create_app(config_name):
     :param config_name: 配置文件名称
     :return:
     """
+    logger.info("start server config: " + config_name)
     app = Flask(__name__)
     app.config.from_object(config[config_name])
     config[config_name].init_app(app)

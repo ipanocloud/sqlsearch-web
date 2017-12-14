@@ -1,2 +1,12 @@
-flask==0.12.2
 aiomysql==0.0.11
+click==6.7
+dominate==2.3.1
+Flask==0.12.2
+Flask-Bootstrap==3.3.7.1
+itsdangerous==0.24
+Jinja2==2.10
+MarkupSafe==1.0
+PyMySQL==0.7.11
+PyYAML==3.12
+visitor==0.1.3
+Werkzeug==0.13
