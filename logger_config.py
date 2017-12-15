@@ -62,7 +62,7 @@ LOGGING_CONFIG = {
 
 def get_logger():
     """
-    获取日志生成器
+    获取日志记录器实例
     :return:
     """
     logsdir = BASE_DIR + '\logs'

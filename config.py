@@ -7,7 +7,7 @@ import os
 import logger_config
 
 basedir = os.path.abspath(os.path.dirname(__file__))
-logger = logger_config.get_logger();
+logger = logger_config.get_logger()
 
 
 class Config:
