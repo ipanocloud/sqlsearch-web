@@ -36,7 +36,7 @@ class DevelopmentConfig(Config):
             'database': 'jt_cloudstitch'
         },
         'db1': {
-            'secret': 'AwEsOmE'
+            'host': '127.0.0.1'
         }
     }
 
