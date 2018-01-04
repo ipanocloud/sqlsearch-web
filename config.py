@@ -36,7 +36,11 @@ class DevelopmentConfig(Config):
             'database': 'jt_cloudstitch'
         },
         'db1': {
-            'host': '127.0.0.1'
+            'host': '127.0.0.1',
+            'port': 3306,
+            'user': 'root',
+            'password': 'pwd@123',
+            'database': 'jt_cloudstitch'
         }
     }
 
